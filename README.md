@@ -77,6 +77,11 @@ The count of car_full_name shows how cars are spread across quality levels based
 The count of price_flag follows the same pattern. There are 886 cars in the Medium price group, 771 cars in the High price group, and 342 cars in the Low price group. This suggests that pricing closely follows the condition of the cars, with medium-condition cars mostly priced in the medium range, and fewer cars falling into the low and high price groups.
 
 
+##Summary
+
+This project analyzes 2,000 car auction sales from California to understand how selling price relates to car condition and mileage. The work starts by cleaning raw data taken from a large Kaggle dataset with over 500,000 records. Text functions such as TEXTSPLIT, VALUE, and TEXTJOIN were used to extract the sale year from date text and to create a clear car name by combining make, model, and trim. Lookup formulas like VLOOKUP were used to identify which cars sold at the lowest and highest prices, linking numeric results back to real vehicles.
+
+After cleaning, the project applies basic EDA using Excel statistics and pivot tables. Selling prices show a strong middle range, with most cars priced between $12,100 and $25,000, while extreme values include a $1,000 Nissan Maxima and a $154,000 Ferrari California. Condition and odometer analysis reveal that most cars are in medium condition with moderate mileage, while very low mileage and very high mileage cars appear as clear outliers. Price and condition flags were created using IFS formulas, and pivot tables show that cars with higher condition scores mostly fall into higher price groups. Overall, the project turns raw auction data into a clear story using Excel formulas, lookups, pivot tables, and simple EDA techniques to explain how car quality, usage, and price connect in real sales data.
 
 
 
