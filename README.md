@@ -1,4 +1,5 @@
-<img width="2870" height="77" alt="image" src="https://github.com/user-attachments/assets/418bad59-aea2-44df-8a35-f987c23665e0" /><img width="3095" height="49" alt="image" src="https://github.com/user-attachments/assets/4456a9fe-aa14-4d2a-86f8-1917f66dd2a8" /># Car_Sales_EDA_Excel_Project
+# Car_Sales_EDA_Excel_Project
+
 This project performs basic Exploratory Data Analysis (EDA) on car auction sales data using Excel. It analyzes selling price, condition, and odometer using summary statistics, price flags, and pivot tables to understand value patterns, quality levels, and how car condition relates to pricing.
 
 ## Data_set Used
@@ -23,6 +24,7 @@ The data includes basic car details such as the model year, brand, model name, t
 In addition, the dataset includes key numeric fields used for analysis. The condition score shows the overall quality of the car, the odometer shows how much the car has been driven, the MMR value gives a market reference price, and the selling price shows the final sale amount. The sale date was converted into a sale year to make time-based analysis simpler and clearer.
 
 ## New Columns
+
 New columns were created to clean the data and make analysis easier. These columns turn raw values into clear and usable information that works better for summaries, pivot tables, and comparisons.
 
 The **sale_year** column was created using the formula
@@ -48,10 +50,13 @@ This dataset has 1,999 cars. The average selling price is $20,393, and the media
 
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1bbb0e29-e662-4506-a35f-e36f96cbaf65" />
+
 The dataset has 1,944 cars. Condition scores range from 1 (Nissan Altima) to 49 (Audi Q5). The average score is 33.5, and the median is 38. Most cars fall between 29 and 43. The most common score is 44. This shows most cars are in decent condition with some variation.
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c4d40ebd-813e-4882-bb58-73c62f14df7d" />
+
 The dataset has 1,999 cars. Odometer readings range from 1 mile (likely a new or demo car) to 999,999 miles (very high mileage or placeholder). The average is 35,371 miles, and the median is 32,906 miles. Most cars fall between 21,323 and 43,261 miles. The mode is 13,661 miles. This shows most cars are moderately used, with some outliers at very low or very high mileage.
+
 These **VLOOKUP** formulas were used:
 =VLOOKUP(B6, car_sale_raw_dataset!O:R, 4, FALSE)
 =VLOOKUP(F6, car_sale_raw_dataset!$I:$R, 10, FALSE)
@@ -66,6 +71,7 @@ For body types, Sedan appears most often, followed by SUV, G Sedan, Hatchback, a
 
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/38e7d849-8e00-407d-86c7-716b08d02bfd" />
+
 The count of car_full_name shows how cars are spread across quality levels based on condition. Most cars fall into the Medium condition group, with 886 cars in this range. There are 771 cars in the High condition group, while 342 cars are in the Low condition group. This shows that most cars are neither very poor nor very high in condition, but sit in the middle range.
 
 The count of price_flag follows the same pattern. There are 886 cars in the Medium price group, 771 cars in the High price group, and 342 cars in the Low price group. This suggests that pricing closely follows the condition of the cars, with medium-condition cars mostly priced in the medium range, and fewer cars falling into the low and high price groups.
