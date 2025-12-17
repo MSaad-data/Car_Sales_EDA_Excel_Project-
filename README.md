@@ -43,7 +43,7 @@ The price_flag column was created using
 IFS(O2<18200,"Low", O2<=50000,"Medium", O2>50000,"High").
 This groups selling prices into simple ranges. These labels make it easier to compare prices, build pivot tables, and understand how cars are distributed across price levels.
 
-##EDA
+## EDA
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/88749f3c-f795-47bc-8692-44299184d96d" />
 This dataset has 1,999 cars. The average selling price is $20,393, and the median is $18,200. Most cars cost between $12,100 (Q1) and $25,000 (Q3). The cheapest car is a Nissan Maxima at $1,000, and the most expensive is a Ferrari California at $154,000. Prices vary a lot, showing a mix of cheap and expensive cars in the market.
@@ -62,7 +62,7 @@ These **VLOOKUP** formulas were used:
 =VLOOKUP(F6, car_sale_raw_dataset!$I:$R, 10, FALSE)
 =VLOOKUP(J6, car_sale_raw_dataset!$J:$R, 9, FALSE)
 
-##Pivot tables
+## Pivot tables
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/070ec6fb-7b5a-43bb-a459-9fcfa41cae1d" />
 
@@ -77,7 +77,7 @@ The count of car_full_name shows how cars are spread across quality levels based
 The count of price_flag follows the same pattern. There are 886 cars in the Medium price group, 771 cars in the High price group, and 342 cars in the Low price group. This suggests that pricing closely follows the condition of the cars, with medium-condition cars mostly priced in the medium range, and fewer cars falling into the low and high price groups.
 
 
-##Summary
+## Summary
 
 This project analyzes 2,000 car auction sales from California to understand how selling price relates to car condition and mileage. The work starts by cleaning raw data taken from a large Kaggle dataset with over 500,000 records. Text functions such as TEXTSPLIT, VALUE, and TEXTJOIN were used to extract the sale year from date text and to create a clear car name by combining make, model, and trim. Lookup formulas like VLOOKUP were used to identify which cars sold at the lowest and highest prices, linking numeric results back to real vehicles.
 
